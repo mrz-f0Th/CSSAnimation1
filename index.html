@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ind">
+<head>
+	<meta charset="UTF-8">
+	<title>Love</title>
+	<link rel="stylesheet" href="style.css">
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+		}
+
+		body {
+			height: 100vh;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			background: black;
+		}
+
+		span {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			position: relative;
+			width: 10px;
+			height: 10px;
+			transition: 2s;
+			background: red;
+			border-radius: 50%;
+		}
+
+		span::before {
+			content: '';
+			background: red;
+			position: absolute;
+			left: 115px;
+			width: 0px;
+			height: 0px;
+			transform: rotate(-45deg);
+			border-radius: 200px 200px 0 0;
+			transition: 1s;
+		}
+
+		span::after {
+			content: '';
+			background: red;
+			position: absolute;
+			right: 115px;
+			width: 0px;
+			height: 0px;
+			transform: rotate(45deg);
+			border-radius: 200px 200px 0 0;
+			transition: 1s;
+		}
+
+		span:hover {
+			width: 500px;
+			height: 500px;
+			background: transparent;
+		}
+
+		span:hover::before {
+			transition: 5s;
+			width: 200px;
+			height: 300px;
+			background: red;
+			box-shadow: 0 0 5px red,
+				0 0 25px red,
+				0 0 50px red,
+				0 0 100px red;
+		}
+
+		span:hover::after {
+			transition: 5s;
+			width: 200px;
+			height: 300px;
+			background: red;
+			box-shadow: 0 0 5px red,
+				0 0 25px red,
+				0 0 50px red,
+				0 0 100px red;
+		}
+
+		p {
+			font-size: 0;
+			font-family: cursive;
+			color: transparent;
+			position: relative;
+			z-index: 1;
+			transition: 2s;
+		}
+
+		span:hover p {
+			color: black;
+			font-size: 80px;
+			transition: 8s;
+		}
+
+		@media(max-width: 500px) {
+			span:hover::before {
+				width: 100px;
+				height: 200px;
+				left: 154px;
+			}
+
+			span:hover::after {
+				width: 100px;
+				height: 200px;
+				right: 154px;
+			}
+		}
+	</style>
+</head>
+<body>
+
+	<span><p>Nabila</p></span>
+
+</body>
+</html>
