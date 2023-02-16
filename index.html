@@ -5,6 +5,11 @@
 	<title>Love</title>
 	<link rel="stylesheet" href="style.css">
 	<style>
+.prevent-select {
+  -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE 10 and IE 11 */
+  user-select: none; /* Standard syntax */
+}
 		* {
 			margin: 0;
 			padding: 0;
@@ -114,7 +119,7 @@
 </head>
 <body>
 
-	<span><p>ndaa😝</p></span>
+	<span><p class='prevent-select'>ndaa😝</p></span>
 
 </body>
 </html>
